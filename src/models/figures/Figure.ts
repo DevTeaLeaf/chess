@@ -1,5 +1,5 @@
-import { Colors } from "../Colors";
 import logo from "../../assets/black-king.png";
+import { Colors } from "../Colors";
 import { Cell } from "../Cell";
 
 export enum FigureNames {
@@ -11,6 +11,7 @@ export enum FigureNames {
   ROOK = "Ладья",
   BISHOP = "Слон",
 }
+
 export class Figure {
   color: Colors;
   logo: typeof logo | null;
@@ -28,7 +29,10 @@ export class Figure {
   }
 
   canMove(target: Cell): boolean {
+    if (target.figure?.color === this.color) return false;
+    if (target.figure?.name === FigureNames.KING) return false;
     return true;
   }
+
   moveFigure(target: Cell) {}
 }

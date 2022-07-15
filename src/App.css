@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
 }
+
 .app {
   width: 100vw;
   height: 100vh;
@@ -34,6 +35,20 @@
 .white {
   background-color: #eed4ac;
 }
+
 .selected {
   background-color: brown;
+}
+.available {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background-color: #22c022;
+}
+
+.lost {
+  height: calc(50vh - 60px);
+  padding: 30px;
+  margin-left: 50px;
+  background-color: lightgray;
 }
